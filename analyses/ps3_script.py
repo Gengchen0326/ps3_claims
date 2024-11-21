@@ -27,6 +27,7 @@ y = df["PurePremium"]
 
 # TODO: use your create_sample_split function here
 # df = create_sample_split(...)
+df = create_sample_split(df, columns=["IDpol"], train_fraction=0.8)
 train = np.where(df["sample"] == "train")
 test = np.where(df["sample"] == "test")
 df_train = df.iloc[train].copy()
